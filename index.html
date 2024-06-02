@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEN-the python developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<header class="fixed w-full py-4 lg:px-0 px-5 z-[999] duration-300">
+    <nav class="flex justify-between items-center max-w-6xl mx-auto px-2">
+        <div class="flex gap-4 items-center">
+            <div class="bg-blue-400 text-white text-center rounded-full p-2 text-xl">E.</div>
+            <div>
+                <h4 class="font-bold text-lg uppercase">Kenneth</h4>
+                <p class="text-xs">Profile</p>
+            </div>
+        </div>
+            <ul class="md:flex hidden items-center gap-5 hover:*:text-primary *:duration-200">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <span class="theme-switch md:block hidden"><i class="fa-solid fa-circle-half-stroke ml-1 cursor-pointer"></i></span>
+            </ul>
+            <div class="flex items-center gap-5">
+                <a href="#contact"><button class="btn btn-outline md:!flex !hidden">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    Let's Talk
+                </button></a>
+                <span class="theme-switch md:hidden"><i class="fa-solid fa-circle-half-stroke ml-1 cursor-pointer"></i></span>
+                <span id="menubar" class="cursor-pointer md:hidden text-xl"><i class="fa-solid fa-bars cursor-pointer"></i></span>
+            </div>
+    </nav>
+</header>
+
+    <!-- Backdrop -->
+    <span id="backdrop" class="fixed h-screen bg-black/10 inset-0 backdrop-blur-sm z-[997] hidden">
+
+    </span>
+    <!-- mobile-nav -->
+    <ul id="mobile-nav" class="flex-center flex-col gap-10 items-center fixed w-full bottom-0 duration-200 left-0 z-[998] text-xl dark:bg-slate-800 bg-primary text-white rounded-t-3xl h-0 overflow-hidden">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+    </ul>
+
+
+<body class="dark:bg-slate-900 dark:text-gray-200">
+    <section id="home" class="min-h-screen container grid place-items-center relative before:absolute before:top-0 before:bg-heroLight before:size-full before:start-1/2 before:transform before:-translate-x-1/2 before:bg-no-repeat before:-z-[1] before:dark:bg-heroDark">
+        <div class="size-full pt-20 grid md:grid-cols-6 items-center justify-around max-w-6xl">
+            <div class="lg:col-span-2 md:col-span-3 md:text-left text-center sm:pl-2">
+                <h5 class="font-mediem text-gray-600 md:text-gray-200">Hello, Welcome</h5>
+                <h1 class="sm:text-5xl text-4xl leading-normal dark:text-white relative font-medium">I'm <span class="text-blue-400">Kenneth,</span><br>
+                    A Full Stack Developer
+                </h1>
+                <div>
+                    <button class="btn btn-filled mt-5"><a href="#contact">
+                        <i class="fa-regular fa-envelope"></i>
+                        Hire Me
+                    </a>
+                    </button>
+                    <button class="font-semibold dark:text-gray-200 border-b-2 border-gray-700 ml-4">
+                        <a href="#project">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                              see Portfolio
+                        </a>
+                    </button>
+                </div>
+                <div class="md:w-96 md:ml-auto flex mt-9 gap-2 dark:text-gray-300">
+                    <p class="text-balance text-xs leading-5 max-w-md px-2 mx-auto">
+                        I'm a passionate full-stack website developer 
+                        dedicated to crafting exceptional digital experiences.
+                    </p>
+                </div>
+                <div class="flex items-center md:justify-end justify-center mt-9 gap-6 darK:text-gray-200 text-gray-600">
+                    <p class="text-xs">Follow Me.</p>
+                    <div class="gap-3">
+                        <a href="" class="social-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a href="" class="social-icon">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                        <a href="" class="social-icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="lg:col-span-2 md:col-span-3">
+                <img src="assets/background-image-5.png" alt="" class="md:w-full mt-5 md:mt-0 max-w-96 w-2/3 mx-auto">
+            </div>
+            <div class="lg:col-span-2 md:col-span-6 lg:bg-gradient-to-l from-gray-100 md:bg-none bg-gradient-to-l dark:from-slate-800 md:mt-0 mt-2 lg:h-96 md:h-auto h-96">
+                <ul class="text-2xl leading-[3.14rem] text-center pt-5 lg:block md:flex items-center justify-between data-[slot=count]:*:text-3xl data-[slot=count]:*:font-bold">
+                    <li data-slot="count">3+</li>
+                    <li>Years Of <span class="text-blue-400">Experience</span></li><br>
+                    <li data-slot="count">8+</li>
+                    <li>Completed <span class="text-blue-400">Projects</span></li>
+                    <li>
+                        <button class="btn btn-outline mt-10 lg:mt-10 md:mt-0">
+                            <i class="fa-solid fa-download"></i>
+                            download cv
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="about" class="container min-h-screen flex-center">
+        <div>
+            <div class="text-center text-balance">
+                <h3>What I know.</h3>
+                <p class="px-6 leading-5">
+                As a Python Django website developer, I possess a strong foundation in creating dynamic and interactive web applications.
+                With expertise in Django, a powerful web framework, I am proficient in building robust, scalable, and secure websites 
+                tailored to meet the unique needs of my clients.
+
+                </p>
+            </div>
+            <div class="max-w-2xl grid sm:grid-cols-3 md:grid-cols-1 gap-6 px-2 mt-10 mx-auto *:text-lg *:bg-gray-100 *:dark:bg-slate-800 *:p-7 *:flex *:items-center *:gap-12 *:md:flex-row *:flex-col *:rounded-xl *:max-w-sm *:sm:max-w-full *:mx-auto *:text-center *:sm:text-left hover:*:brightness-90 *:shadow-sm *:cursor-pointer">
+                <div class="flex justify-between">
+                    <div class="*:text-blue-400 md:flex-row md:basis-1/3">
+                        <i class="fa-regular fa-object-ungroup"></i>
+                        <h5 class="font-semibold whitespace-wrap">Custom Software Development</h5>
+                    </div>
+                    <div class="basis-2/3">
+                        <p class="text-sm text-gray-600 text-start dark:text-gray-200 leading-5 text-balance">
+                            Creating custom software solutions that meet specific corporate needs,and also improving operational efficiency.
+                        </p>
+                        <ul class="text-xs text-start mt-2 pl-2">
+                            <li><span class="font-bold text-3xl">.</span> Enterprise Software Development</li>
+                            <li><span class="font-bold text-3xl">.</span> Web Application Development</li>
+                            <li><span class="font-bold text-3xl">.</span> Mobile Application Development</li>
+                            <li><span class="font-bold text-3xl">.</span> E-commerce Solutions</li>
+                            <li><span class="font-bold text-3xl">.</span> CRM and ERP Systems</li>
+                            <li><span class="font-bold text-3xl">.</span> Custom API Development</li>
+                        </ul>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-long text-blue-400 cursor-pointer rotate-45"></i>
+                </div>
+
+                <div class="flex justify-between">
+                    <div class="text-blue-400 md:flex-row md:basis-1/2">
+                        <i class="fa-regular fa-object-ungroup"></i>
+                        <h5 class="font-semibold whitespace-wrap">Website Developement(full-Stack)</h5>
+                    </div>
+                    <div class=>
+                        <p class="text-sm text-gray-600 text-start dark:text-gray-200 leading-5 text-balance">
+                            Utilizing array of programming languages to create dynamic websites and web applications that help companies create a strong online presence and provide smooth user experiences.
+                        </p>
+                        <ul class="text-xs text-start mt-2 pl-2">
+                            <li><span class="font-bold text-3xl">.</span> Front-end Development</li>
+                            <li><span class="font-bold text-3xl">.</span> Back-end Development</li>
+                            <li><span class="font-bold text-3xl">.</span> UI/UX Design</li>
+                            <li><span class="font-bold text-3xl">.</span> Responsive Web Design</li>
+                            <li><span class="font-bold text-3xl">.</span> Database Management</li>
+                            <li><span class="font-bold text-3xl">.</span> Content Management Systems(CMS) Integration</li>
+                        </ul>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-long text-blue-400 cursor-pointer rotate-45"></i>
+                </div>
+
+                <div class="flex justify-between">
+                    <div class="text-blue-400 md:flex-row md:basis-1/3">
+                        <i class="fa-regular fa-object-ungroup"></i>
+                        <h5 class="font-semibold whitespace-wrap">App Development</h5>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-600 text-start dark:text-gray-200 leading-5 text-balance">
+                            Developing cutting-edge mobile apps that let companies interact and communicate with their customers wherever they are and at any time.
+                        </p>
+                        <ul class="text-xs text-start mt-2 pl-2">
+                            <li><span class="font-bold text-3xl">.</span> Android App Development</li>
+                            <li><span class="font-bold text-3xl">.</span> iOS App Development</li>
+                            <li><span class="font-bold text-3xl">.</span> Native App Development</li>
+                            <li><span class="font-bold text-3xl">.</span> Hybrid App Development</li>
+                            <li><span class="font-bold text-3xl">.</span> Cross-Platform App Development</li>
+                            <li><span class="font-bold text-3xl">.</span> Content Management Systems(CMS) Integration</li>
+                        </ul>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-long text-blue-400 cursor-pointer rotate-45"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="container min-h-full flex-center">
+        <div class="text-center text-balance">
+            <h3>My Projects</h3>
+            <p class="px-2 mt-3 text-gray-500">
+                
+            </p>
+            <br>
+            <div class="flex-center gap-4">
+                <button class="btn btn-filled">All Works</button>
+                <button class="btn btn-filled">Website</button>
+                <button class="btn btn-filled">Mobile</button>
+            </div>
+            <br>
+            <div class="*:size-full *:border-4 *:object-cover *:dark:border-white *:rounded-md gap-4 *:cursor-pointer *:duration-100 *:hover:grayscale hover:*:grayscale-0 grid md:grid-rows-2 md:px-0 px-10 md:grid-cols-2 mx-auto max-w-4xl">
+                <img src="assets/pro1.jpg" alt="">
+                <img src="assets/pro2.jpg" alt="">
+                <img src="assets/pro3.jpg" alt="">
+                <img src="assets/pro1.jpg" alt="">
+                <img src="assets/pro2.jpg" alt="">
+                <img src="assets/pro3.jpg" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="container relative max-w-4xl mx-auto min-h-screen flex-center px-5">
+        <div class="pb-10">
+            <div class="text-center">
+                <h3>Contact Us.</h3>
+                <p class="px-2 mt-3 text-gray-500">
+                    Achieve exceptional growth and operational efficiency with our custom mobile app design and development services. 
+                    We seamlessly blend innovation with functionality to create unique solutions tailored to your specific business needs. 
+                    Experience superior quality, prompt delivery, and competitive pricing, positioning you at the forefront of the contemporary digital era.
+                </p>
+            </div>
+            <div class="mt-12 md:relative flex flex-col gap-5 sm:max-w-full mx-auto max-w-xs">
+               <div class="dark:bg-slate-800 bg-slate-50 dark:text-gray-100 text-gray-800 shadow-xl mx-auto md:w-2/3 w-full py-14 px-7">
+                <h3 class="font-bold">Send Me A </br> 
+                    <span>Message</span></h3>
+                    <form form action="https://formsubmit.co/pythondev048@gmail.com" method="POST" class="*:flex *:flex-col *:gap-1 mt-5 md:w-2/3 w-full">
+                        <div>
+                            <label for="name">Name</label>
+                             <input type="text" name="name" id="name" placeholder="enter your name" required>
+                        </div>
+    
+                        <div>
+                            <label for="email">Email</label>
+                             <input type="email" name="email" id="email" placeholder="enter your Email" required>
+                        </div>
+    
+                        <div>
+                            <label for="name">Message</label>
+                             <textarea id="message" name="message" placeholder="enter your message" required></textarea>
+                        </div>
+                        <button class="btn btn-filled ml-auto">Send to Me</button>
+                    </form>
+               </div>
+               <div class="dark:bg-gray-700 bg-white py-12 px-7 md:absolute lg:-right-9 right-28 rounded-xl shadow-xl md:w-2/5 h-5/6 top-28 w-full mx-auto">
+                <h3 class="font-semibold text-2xl border-b pb-4 border-gray-600">
+                    Drop In My</br>
+                    <span class="text-blue-400">Office</span>
+                </h3>
+                <div class="">
+                    <p class="text-xs text-gray-400 leading-5">
+                        With a commitment to staying updated with the 
+                        latest industry trends and best practices, I am equipped to tackle diverse challenges and bring innovative ideas to life.
+                        Whether you need a simple business website, an e-commerce platform, 
+                        or a custom web application, I am here to turn your vision into reality.
+                    </p>
+                    <ul class="*:flex *:gap-4 *:items-center *:mt-2"> 
+
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h2>Magodo</h2>
+                                <address>20B, Oremeji Estate</address>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>pythondev048@gmail.com</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+234 807 268 2200</p>
+                        </li>
+                    </ul>
+                    <div class="flex items-center md:justify-end justify-center mt-9 gap-6 darK:text-gray-200 text-gray-600">
+                        <p class="text-xs">Follow Us.</p>
+                        <div class="gap-3 dark:text-slate-50">
+                            <a href="https://github.com/kenturkey048" class="social-icon">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+    
+                            <a href="https://www.linkedin.com/in/ekok-kenneth-0b0482198/" class="social-icon">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+    
+                            <a href="https://x.com/pythonDev048" class="social-icon">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="dark:bg-slate-700 text-center py-2 bg-slate-100">
+        copyright &copy; 2024
+        <ul class="flex-center gap-5 py-4 text-sm">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </footer>
+    <script src="main.js"></script>
+
+    <script>
+        const header = document.querySelector('header');
+        const toggleClasses = (element, classes, condition) => {
+            classes.forEach((className) => {
+                element.classList.toggle(className, condition);
+            });
+        };
+
+        window.addEventListener('scroll', () => {
+            toggleClasses(header, ['bg-white', 'dark:text-white', 'dark:bg-slate-800', 'shadow-lg', 'dark:sm:bg-slate-900'], window.scrollY > 0);
+        })
+    </script>
+</body>
+</html>
